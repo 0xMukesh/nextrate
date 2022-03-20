@@ -2,7 +2,6 @@ const fs = require('fs');
 const listr = require('listr');
 
 const createFile = require('../utils/createFile');
-const boilerplate = require('../data/boilerplate');
 
 function createComponent(fileName, fileType, path) {
   const tasks = new listr([
@@ -21,6 +20,7 @@ function createComponent(fileName, fileType, path) {
           }
         }
         else {
+          fileExtension = 'ts';
           console.log(`Found a tsconfig.json file.`)
           if (fs.existsSync(path)) {
             createFile(path, fileName, fileType, fileExtension);
