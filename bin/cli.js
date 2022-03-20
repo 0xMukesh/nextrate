@@ -4,10 +4,11 @@ const inquirer = require('inquirer');
 const fs = require('fs')
 
 const questions = require('./data/questions');
-const checkIsDir = require('./lib/checkIsDir');
+const spiltPath = require('./lib/splitPath');
+const createComponent = require('./lib/createComponent');
 
 const path = process.cwd();
 
-inquirer.prompt(questions).then(answers => {
-  checkIsDir(answers.path)
+inquirer.prompt(questions).then(async (answers) => {
+  createComponent(answers.component, spiltPath(answers.path), answers.path)
 });
