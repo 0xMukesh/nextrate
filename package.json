@@ -1,11 +1,17 @@
 {
-  "name": "next-generate",
+  "name": "nextrate",
   "version": "0.0.1",
   "description": "A CLI to quickly generate Next.js components",
   "main": "bin/cli.js",
   "bin": {
-    "ng": "bin/cli.js"
+    "nextrate": "bin/cli.js"
   },
+  "keywords": [
+    "cli",
+    "next.js",
+    "automation",
+    "snippets"
+  ],
   "scripts": {
     "start": "node bin/cli.js"
   },
@@ -16,5 +22,13 @@
     "figlet": "^1.5.2",
     "inquirer": "^8.2.1",
     "listr": "^0.14.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kira272921/nextrate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kira272921/nextrate/issues"
+  },
+  "homepage": "https://github.com/Kira272921/nextrate/issues#readme"
 }
