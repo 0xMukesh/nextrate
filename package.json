@@ -1,6 +1,6 @@
 {
   "name": "nextrate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A CLI to quickly generate Next.js components",
   "main": "bin/cli.js",
   "bin": {
