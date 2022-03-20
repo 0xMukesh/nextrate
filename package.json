@@ -1,0 +1,18 @@
+{
+  "name": "next-generate",
+  "version": "0.0.1",
+  "description": "A CLI to quickly generate Next.js components",
+  "main": "bin/cli.js",
+  "bin": {
+    "ng": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js"
+  },
+  "author": "Kira272921",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.2.1",
+    "listr": "^0.14.3"
+  }
+}
