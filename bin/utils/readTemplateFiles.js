@@ -9,6 +9,4 @@ function readTemplateFiles(templateType, fileExtension) {
   }
 }
 
-console.log(readTemplateFiles('component', 'js'))
-
 module.exports = readTemplateFiles
