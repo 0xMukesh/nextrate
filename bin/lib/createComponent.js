@@ -1,32 +1,33 @@
 const fs = require('fs');
 const listr = require('listr');
 
-const cwdPath = process.cwd();
+const createFile = require('../utils/createFile');
+const boilerplate = require('../data/boilerplate');
 
 function createComponent(fileName, fileType, path) {
   const tasks = new listr([
     {
       title: `Creating a component at ${path}`,
       task: async () => {
+        var fileExtension;
         if (!fs.existsSync('tsconfig.json')) {
+          fileExtension = 'js';
           if (fs.existsSync(path)) {
-            fs.appendFileSync(`${path}/${fileName}.${fileType}.js`, '');
+            createFile(path, fileName, fileType, fileExtension);
           }
           else {
             fs.mkdirSync(`${path}`);
-            fs.appendFileSync(`${path}/${fileName}.${fileType}.js`, '');
-            console.log(`Created ${fileName}.${fileType}.js at ${path}`);
+            createFile(path, fileName, fileType, fileExtension);
           }
         }
         else {
           console.log(`Found a tsconfig.json file.`)
           if (fs.existsSync(path)) {
-            fs.appendFileSync(`${path}/${fileName}.${fileType}.ts`, '');
+            createFile(path, fileName, fileType, fileExtension);
           }
           else {
             fs.mkdirSync(`${path}`);
-            fs.appendFileSync(`${path}/${fileName}.${fileType}.ts`, '');
-            console.log(`Created ${fileName}.${fileType}.ts at ${path}`);
+            createFile(path, fileName, fileType, fileExtension);
           }
         }
       }
