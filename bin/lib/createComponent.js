@@ -1,35 +1,42 @@
 const fs = require('fs');
 const listr = require('listr');
+const chalk = require('chalk');
+const shelljs = require('shelljs')
 
 const createFile = require('../utils/createFile');
 
-function createComponent(fileName, fileType, path) {
+function createComponent(name, type, path) {
   const tasks = new listr([
     {
       title: `Creating a component at ${path}`,
       task: async () => {
-        var fileExtension;
+        var extension;
         // Checking where there is a tsconfig.json file in the current directory
 
         if (!fs.existsSync('tsconfig.json')) {
-          fileExtension = 'js';
+          extension = 'js';
           if (fs.existsSync(path)) {
-            createFile(path, fileName, fileType, fileExtension);
+            createFile(path, name, type, extension);
           }
           else {
-            fs.mkdirSync(`${path}`);
-            createFile(path, fileName, fileType, fileExtension);
+            console.log(chalk.red(`🦄 Directory not found! Creating the directory...`));
+            shelljs.mkdir('-p', path);
+            console.log(chalk.green(`🦄 Directory created! Adding the component...`))
+            createFile(path, name, type, extension);
           }
         }
         else {
           fileExtension = 'ts';
           console.log(`Found a tsconfig.json file.`)
           if (fs.existsSync(path)) {
-            createFile(path, fileName, fileType, fileExtension);
+            console.log(`🦄 Directory found! Adding the component...`)
+            createFile(path, name, type, extension);
           }
           else {
-            fs.mkdirSync(`${path}`);
-            createFile(path, fileName, fileType, fileExtension);
+            console.log(chalk.red(`🦄 Directory not found! Creating the directory...`))
+            shelljs.mkdir('-p', path);
+            console.log(chalk.green(`🦄 Directory created! Adding the component...`))
+            createFile(path, name, type, extension);
           }
         }
       }
