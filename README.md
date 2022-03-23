@@ -44,7 +44,7 @@ nextrate
 
 Give a ⭐️ if this project helped you!
 
-# 📝 License
+## 📝 License
 
 Copyright © 2022 Kira. <br />
 This project is [MIT](./LICENSE) licensed.
