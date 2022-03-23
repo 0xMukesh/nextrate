@@ -9,6 +9,8 @@ function createComponent(fileName, fileType, path) {
       title: `Creating a component at ${path}`,
       task: async () => {
         var fileExtension;
+        // Checking where there is a tsconfig.json file in the current directory
+
         if (!fs.existsSync('tsconfig.json')) {
           fileExtension = 'js';
           if (fs.existsSync(path)) {

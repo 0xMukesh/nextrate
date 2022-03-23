@@ -1,3 +1,5 @@
+// The initial questions which are been asked to the user when he runs the `nextrate` command
+
 const questions = [
   {
     type: 'text',
