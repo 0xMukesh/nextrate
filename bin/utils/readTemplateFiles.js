@@ -10,7 +10,7 @@ function readTemplateFiles(type, extension) {
     extension = 'ts'
   }
   else {
-    return
+    return ''
   }
 
   try {

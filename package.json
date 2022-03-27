@@ -19,7 +19,6 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "4.1.2",
-    "figlet": "^1.5.2",
     "inquirer": "^8.2.1",
     "listr": "^0.14.3",
     "object-path": "^0.11.8",

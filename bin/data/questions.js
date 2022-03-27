@@ -10,12 +10,24 @@ if (fs.existsSync(configFilePath)) {
     {
       type: 'text',
       name: 'component',
-      message: 'Enter the component name'
+      message: 'Enter the component name',
+      validate: function (value) {
+        if (value === '') {
+          return 'Please enter the component name';
+        }
+        return true
+      }
     },
     {
       type: 'text',
       name: 'path',
-      message: 'Enter the folder path where you want to generate the component'
+      message: 'Enter the folder path where you want to generate the component',
+      validate: function (value) {
+        if (value === '') {
+          return 'Please enter the folder path';
+        }
+        return true
+      }
     }
   ]
 }
@@ -25,12 +37,28 @@ else {
     {
       type: 'text',
       name: 'component',
-      message: 'Enter the component name'
+      message: 'Enter the component name',
+      validate: function (value) {
+        if (value === '') {
+          return 'Please enter the component name';
+        }
+        else {
+          return true
+        }
+      }
     },
     {
       type: 'text',
       name: 'path',
-      message: 'Enter the folder path where you want to generate the component'
+      message: 'Enter the folder path where you want to generate the component',
+      validate: function (value) {
+        if (value === '') {
+          return 'Please enter the folder path';
+        }
+        else {
+          return true
+        }
+      }
     },
     {
       type: 'input',
