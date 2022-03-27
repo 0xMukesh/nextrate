@@ -37,6 +37,14 @@ else {
       name: 'config',
       message: '✨ config: Do you want to use the .jsx and .tsx file format for the component? (y/n)',
       choices: ['y', 'n'],
+      default: 'y',
+      validate: function (value) {
+        var pass = value.match(/^(y|n)$/i);
+        if (pass) {
+          return true;
+        }
+        return 'Please enter "y" or "n" only';
+      }
     }
   ]
 }
