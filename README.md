@@ -30,11 +30,50 @@ A CLI tool for quickly generating Next.js components.
 
 ## 🔌 Usage
 
-After installing, you can use the CLI by running the following command:
+- [`nextrate generate`](#nextrate-generate)
+- [`nextrate help [COMMAND]`](#nextrate-help-command)
 
-```bash
-nextrate generate
-```
+  ### `nextrate generate`
+
+  👀 Generate a new Next.js component using nextrate
+
+  ```bash
+  USAGE
+  $ nextrate generate
+
+  DESCRIPTION
+  👀 Generate a new Next.js component using nextrate
+
+  EXAMPLES
+  $ nextrate generate
+
+    ? enter the component name button
+    ? enter the folder path where you want to generate the component components
+    ? ✨ config: choose which type of extension do you want to use ? tsx
+    🦄 Directory not found! Creating the directory...
+    🦄 Directory created! Adding the component...
+    🎉 Created button.component.tsx at components
+    🌈 Added boilerplate to button.component.tsx at components
+      √ Creating a component at components
+  ```
+
+  ### `nextrate help [COMMAND]`
+
+  Display help for nextrate.
+
+  ```bash
+  USAGE
+  $ nextrate help [COMMAND] [-n]
+
+  ARGUMENTS
+  COMMAND Command to show help for.
+
+  FLAGS
+  -n, --nested-commands Include all nested commands in the output.
+
+  DESCRIPTION
+  Display help for nextrate.
+  ```
 
 ## 🎉 Demo
 
