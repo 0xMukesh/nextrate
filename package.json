@@ -24,7 +24,7 @@
     "@oclif/plugin-plugins": "^2.0.1",
     "chalk": "4.1.2",
     "figchalk": "^1.0.3",
-    "inquirer": "^8.2.1",
+    "inquirer": "^8.2.2",
     "listr": "^0.14.3",
     "object-path": "^0.11.8",
     "shelljs": "^0.8.5"
