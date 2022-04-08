@@ -1,35 +1,84 @@
 {
   "name": "nextrate",
-  "version": "0.1.8",
-  "description": "A CLI to quickly generate Next.js components",
-  "main": "bin/cli.js",
-  "bin": {
-    "nextrate": "bin/cli.js"
-  },
-  "keywords": [
-    "cli",
-    "next.js",
-    "automation",
-    "snippets"
-  ],
-  "scripts": {
-    "start": "node bin/cli.js"
-  },
+  "version": "1.0.0",
+  "description": "🌈 A CLI to quickly generate Next.js components",
   "author": "Kira272921",
+  "bin": {
+    "nextrate": "./bin/run"
+  },
+  "homepage": "https://github.com/Kira272921/nextrate",
   "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "Kira272921/nextrate",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/package.json"
+  ],
   "dependencies": {
+    "@oclif/command": "^1.8.16",
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^2.0.1",
     "chalk": "4.1.2",
+    "figchalk": "^1.0.3",
     "inquirer": "^8.2.1",
     "listr": "^0.14.3",
     "object-path": "^0.11.8",
     "shelljs": "^0.8.5"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kira272921/nextrate.git"
+  "devDependencies": {
+    "@oclif/test": "^2",
+    "@types/chai": "^4",
+    "@types/inquirer": "^8.2.1",
+    "@types/listr": "^0.14.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.9.4",
+    "@types/object-path": "^0.11.1",
+    "@types/shelljs": "^0.8.11",
+    "chai": "^4",
+    "eslint": "^7.32.0",
+    "eslint-config-oclif": "^4",
+    "eslint-config-oclif-typescript": "^1.0.2",
+    "globby": "^11",
+    "mocha": "^9",
+    "oclif": "^2",
+    "shx": "^0.3.4",
+    "ts-node": "^10.7.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
   },
-  "bugs": {
-    "url": "https://github.com/Kira272921/nextrate/issues"
+  "oclif": {
+    "bin": "nextrate",
+    "dirname": "nextrate",
+    "commands": "./dist/src/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ]
   },
-  "homepage": "https://github.com/Kira272921/nextrate#readme"
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md",
+    "watch": "tsc -b -w"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": "https://github.com/Kira272921/nextrate/issues",
+  "keywords": [
+    "oclif",
+    "cli",
+    "next.js",
+    "automation",
+    "snippets"
+  ],
+  "types": "dist/index.d.ts"
 }
