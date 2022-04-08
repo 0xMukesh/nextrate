@@ -1,16 +1,21 @@
-const fs = require('fs');
-const chalk = require('chalk');
+import fs from "fs";
+import chalk from "chalk";
 
-const fileType = require('./fileType')
-const readTemplateFiles = require('./readTemplateFiles')
+import fileType from "./fileType";
+import readTemplateFiles from "./readTemplateFiles";
 
-function createFile(path, name, type, extension) {
+const createFile = (
+  path: string,
+  name: string,
+  type: string,
+  extension: string
+) => {
   const filePath = `${path}/${name}.${fileType(type)}.${extension}`;
   const fileName = `${name}.${fileType(type)}.${extension}`;
-  fs.appendFileSync(filePath, '');
+  fs.appendFileSync(filePath, "");
   console.log(chalk.green(`🎉 Created ${fileName} at ${path}`));
   fs.writeFileSync(filePath, readTemplateFiles(type, extension));
   console.log(chalk.green(`🌈 Added boilerplate to ${fileName} at ${path}`));
-}
+};
 
-module.exports = createFile;
+export default createFile;
