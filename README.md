@@ -33,12 +33,12 @@ A CLI tool for quickly generating Next.js components.
 After installing, you can use the CLI by running the following command:
 
 ```bash
-nextrate
+nextrate generate
 ```
 
 ## 🎉 Demo
 
-![](./images/demo.png)
+![](https://imgur.com/b9LM2iT.png)
 
 ## ⭐ Show your support
 
