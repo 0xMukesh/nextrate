@@ -1,3 +1,4 @@
 - [x] Complete add all the constants in the `src/data/constants.ts` file
 - [x] Make the custom boilerplate command work for both `components` and `pages` type boilerplate
-- [ ] Test the custom boilerplate command
+- [x] Test the custom boilerplate command
+- [x] Fix the file type issue and restrict the file type for files under `pages` folder

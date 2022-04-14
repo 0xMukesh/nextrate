@@ -5,7 +5,7 @@ import fs from "fs";
 
 import createComponent from "../lib/createComponent";
 
-import spiltPath from "../utils/splitPath";
+import spiltPath from "../utils/spiltPath";
 
 import questions from "../data/questions";
 import constants from "../data/constants";
