@@ -31,6 +31,7 @@ A CLI tool for quickly generating Next.js components.
 ## 🔌 Usage
 
 - [`nextrate generate`](#nextrate-generate)
+- [`nextrate boilerplate`](#nextrate-boilerplate)
 - [`nextrate help [COMMAND]`](#nextrate-help-command)
 
   ### `nextrate generate`
@@ -43,18 +44,24 @@ A CLI tool for quickly generating Next.js components.
 
   DESCRIPTION
   👀 Generate a new Next.js component using nextrate
+  ```
 
-  EXAMPLES
-  $ nextrate generate
+  ### `nextrate boilerplate`
 
-    ? enter the component name button
-    ? enter the folder path where you want to generate the component components
-    ? ✨ config: choose which type of extension do you want to use ? tsx
-    🦄 Directory not found! Creating the directory...
-    🦄 Directory created! Adding the component...
-    🎉 Created button.component.tsx at components
-    🌈 Added boilerplate to button.component.tsx at components
-      √ Creating a component at components
+  🌈 Customize the default nextrate boilerplate
+
+  ```bash
+  USAGE
+  $ nextrate boilerplate
+
+  OPTIONS
+  -f, --file=file (required) 📦 Path to the file which contains the boilerplate
+
+  -t, --type=type (required) 🌀 Type of boilerplate, whether it is a boilerplate for 'components' or
+  'pages'
+
+  EXAMPLE
+  $ nextrate boilerplate -file=boilerplate.txt -type=components
   ```
 
   ### `nextrate help [COMMAND]`
@@ -82,6 +89,14 @@ A CLI tool for quickly generating Next.js components.
 ## ⭐ Show your support
 
 Give a ⭐️ if this project helped you!
+
+If you are using nextrate in your project, consider adding the below badge to your README.md:
+
+![](https://img.shields.io/badge/using-nextrate%20%F0%9F%A6%84-blue?style=for-the-badge)
+
+```markdown
+![](https://img.shields.io/badge/using-nextrate%20%F0%9F%A6%84-blue?style=for-the-badge)
+```
 
 ## 📝 License
 
