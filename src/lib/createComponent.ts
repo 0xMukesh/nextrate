@@ -6,8 +6,9 @@ import objectPath from "object-path";
 
 import createFile from "../utils/createFile";
 
-const cwd = process.cwd();
-const configFilePath = `${cwd}/.nextrate/config.json`;
+import constants from "../data/constants";
+
+const configFilePath = constants.configFilePath;
 
 function createComponent(name: string, type: string, path: string) {
   const tasks = new listr([
