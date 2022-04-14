@@ -7,7 +7,9 @@ import templateTypes from "../data/templateTypes";
 export default class Boilerplate extends Command {
   static description = "🌈 Customize the default nextrate boilerplate";
 
-  static examples = ["$ nextrate boilerplate -file=boilerplate.txt"];
+  static examples = [
+    "$ nextrate boilerplate -file=boilerplate.txt -type=components",
+  ];
 
   static flags = {
     file: Flags.string({

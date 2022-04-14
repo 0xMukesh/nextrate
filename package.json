@@ -27,6 +27,7 @@
     "inquirer": "^8.2.2",
     "listr": "^0.14.3",
     "object-path": "^0.11.8",
+    "oclif": "^3.0.0",
     "shelljs": "^0.8.5"
   },
   "devDependencies": {
@@ -39,7 +40,6 @@
     "eslint-config-oclif": "^4",
     "eslint-config-oclif-typescript": "^1.0.2",
     "globby": "^11",
-    "oclif": "^3.0.0",
     "shx": "^0.3.4",
     "ts-node": "^10.7.0",
     "tslib": "^2.3.1",
